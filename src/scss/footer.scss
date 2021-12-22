@@ -1,3 +1,125 @@
 //====================================================================================================
 
+.footer {
+	background-color: $mainColor;
+	color: #fff;
+	@include adaptiveValue("padding-top", 45, 20);
+	@include adaptiveValue("padding-bottom", 45, 20);
+	&__container {
+		display: flex;
+		column-gap: rem(55);
+		@media (max-width: em(600)) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__contacts {
+		@media (min-width: em(600)) {
+			flex: 0 0 240px;
+		}
+	}
+
+	&__menu {
+		@media (max-width: em(600)) {
+			@include adaptiveValue("margin-bottom", 40, 20);
+		}
+	}
+}
+.contacts-footer {
+	&__logo {
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+
+	&__callback {
+		@include adaptiveValue("margin-bottom", 48, 20);
+	}
+
+	&__social {
+	}
+}
+.logo-footer {
+	position: relative;
+	z-index: 5;
+	&__title {
+		font-family: "Titania";
+		font-weight: 700;
+		@include adaptiveValue("font-size", 36, 26);
+		letter-spacing: 0.06em;
+	}
+
+	&__sub-title {
+		font-family: "Titania";
+		font-weight: 400;
+		@include adaptiveValue("font-size", 17, 12);
+		letter-spacing: 0.7em;
+		text-transform: uppercase;
+		position: relative;
+		padding: 0px 0px 0px em(46);
+		&::before {
+			content: "";
+			position: absolute;
+			width: em(41);
+			height: em(3.8);
+			top: calc(50% - em(2));
+			left: 0;
+			background-color: #fff;
+		}
+	}
+}
+.callback-foter {
+	&__item {
+		display: flex;
+		&:not(:last-child) {
+			margin-bottom: rem(17);
+		}
+		&::before {
+			padding: 0px rem(15) 0px 0px;
+		}
+		&_phone {
+		}
+
+		&_email {
+		}
+
+		&_map {
+		}
+	}
+}
+
+.social-footer {
+	display: flex;
+	justify-content: space-between;
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: rem(32);
+	}
+}
+.menu-footer {
+	flex: 1 1 auto;
+	&__columns {
+		@media (min-width: $tablet) {
+			display: flex;
+			justify-content: space-between;
+			@include adaptiveValue("margin-right", 63, 10, 1170, 768, 1);
+		}
+	}
+
+	&__column {
+	}
+
+	&__item {
+	}
+
+	&__title {
+	}
+
+	&__list {
+	}
+
+	&__link {
+	}
+}
+
 //====================================================================================================
