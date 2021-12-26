@@ -95,6 +95,12 @@ body {
 			padding: 0 rem(math.div($containerPadding, 2));
 		}
 	}
+	[class*="__big-container"] {
+		max-width: rem(1264);
+		box-sizing: content-box;
+		margin: 0 auto;
+		padding: 0 rem(math.div($containerPadding, 2));
+	}
 } @else {
 	// По брейк-поинтам
 	[class*="__container"] {

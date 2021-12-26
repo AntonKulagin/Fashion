@@ -1,3 +1,100 @@
 //====================================================================================================
 
+.page {
+	&__main {
+		margin: rem(100) 0px 0px 0px;
+		@media (max-width: $tablet) {
+			margin: rem(80) 0px 0px 0px;
+		}
+		@media (max-width: $mobile) {
+			margin: rem(60) 0px 0px 0px;
+		}
+	}
+}
+
+.main-page {
+	background-color: #fff9ed;
+	&__big-container {
+		position: relative;
+	}
+	&__image-ibg {
+		position: absolute;
+		width: 630px;
+		height: 714px;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__container {
+	}
+
+	&__content {
+		width: 50%;
+		padding: 148px 0px 169px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__sub-title {
+		font-weight: 500;
+		line-height: math.div(23, 18);
+		color: $orangeColor;
+		@include adaptiveValue("margin-bottom", 20, 10);
+	}
+
+	&__title {
+		font-family: "Titania";
+		font-size: rem(60);
+		line-height: math.div(66, 60);
+		letter-spacing: 0.06em;
+	}
+
+	&__text {
+	}
+
+	&__button {
+	}
+}
+
+/*
+.main-page {
+	background-color: #fff9ed;
+	&__container {
+		display: flex;
+	}
+
+	&__content {
+		flex: 0 0 50%;
+		padding: 148px 0px 169px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__sub-title {
+		font-weight: 500;
+		line-height: math.div(23, 18);
+		color: $orangeColor;
+		@include adaptiveValue("margin-bottom", 20, 10);
+	}
+
+	&__title {
+		font-family: "Titania";
+		font-size: rem(60);
+		line-height: math.div(66, 60);
+		letter-spacing: 0.06em;
+	}
+
+	&__text {
+	}
+
+	&__button {
+	}
+
+	&__image {
+	}
+}
+*/
+
 //====================================================================================================

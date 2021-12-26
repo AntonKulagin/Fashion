@@ -109,7 +109,7 @@
 		@media (min-width: $tablet) {
 			display: flex;
 			justify-content: space-between;
-			@include adaptiveValue("margin-right", 63, 10, 1170, 768, 1);
+			@include adaptiveValue("margin-right", 63, 0, 1170, 992, 1);
 		}
 	}
 
@@ -123,7 +123,7 @@
 		font-weight: 500;
 		font-size: rem(24);
 		line-height: math.div(30, 24);
-		@include adaptiveValue("margin-bottom", 34, 20);
+		@include adaptiveValue("margin-bottom", 34, 14);
 		cursor: default;
 		._spoller-init & {
 			width: 100%;
@@ -134,15 +134,27 @@
 			@extend ._icon-arrow-down;
 			&::before {
 				@extend %ic;
+				transition: all 0.3s ease 0s;
 			}
+		}
+		&._spoller-active {
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}
+		@media (max-width: $tablet) {
+			margin: 0px 0px rem(10) 0px;
 		}
 	}
 
 	&__list {
 		li {
 			&:not(:last-child) {
-				margin-bottom: 14px;
+				@include adaptiveValue("margin-bottom", 14, 10);
 			}
+		}
+		@media (max-width: $tablet) {
+			margin: 0px 0px rem(10) 0px;
 		}
 	}
 
